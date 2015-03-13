@@ -6,6 +6,8 @@ Most humans manage their cash flow. Some do it with pen, paper and a calculator,
 ## Features
 There really isn't much to it, yet. You add entities: sources of cash inflow (creditors) and channels of cash outflow (debtors). You then add the amounts. Minimal engagement of grey matter.
 
+New features are added frequently. View the upcoming [enhancements](https://github.com/karmasakshi/cashmere/issues?q=label%3Aenhancement).
+
 ## Screenshot
 ![Cashmere Screenshot](https://www.dropbox.com/s/bb6s49uzbu6vflv/cashmere.png?dl=1)
 
