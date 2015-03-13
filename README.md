@@ -1,5 +1,4 @@
 # Cashmere
-by Karmasakshi Goyal
 
 ## Why
 Most humans manage their cash flow. Some do it with pen, paper and a calculator, while others use a spreadsheet or complex money management software. This was made to bridge the gap in between.
@@ -11,7 +10,10 @@ There really isn't much to it, yet. You add entities: sources of cash inflow (cr
 ![Cashmere Screenshot](https://www.dropbox.com/s/bb6s49uzbu6vflv/cashmere.png?dl=1)
 
 ## It's a bug... It's a feature... It's a to-do!
-You can create pull-requests of features you'd like to see (preferably 1 pr per feature) and I shall work on them. Promise.
+[Issues](https://github.com/karmasakshi/cashmere/issues) are actively maintained. You are invited to be a part of it.
+
+## License
+Enjoy responsibly.
 
 ## Generator litter
 
