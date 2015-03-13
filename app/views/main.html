@@ -1,38 +1,48 @@
 <div class="container">
-    <div class="row" ng-repeat="entity in entities| orderBy: 'kind' | filter: entityFilter">
-        <div class="col-md-2">
-            <div class="well well-sm card">
-                <div>
-                    <span>{{entity.name}}</span>
+    <div class="row entity" ng-repeat="entity in entities| filter: entityFilter">
+        <div class="col-md-2 entity-info">
+            <div class="well well-sm card" ng-class="{'creditor': entity.kind === 'c', 'debtor': entity.kind === 'd'}">
+                <div class="text-center">
+                    <span class="lead">{{entity.name}}</span>
                 </div>
-                <div>
-                    <span>{{entity.total| currency: '₹'}}</span>
+                <hr>
+                <div class="text-right total">
+                    <span class="lead">{{entity.total| currency: '₹'}}</span>
                 </div>
             </div>
         </div>
         <div class="col-md-10">
             <div class="well well-sm card">
-                <span ng-repeat="amount in transactions"><a ng-click="deleteTransaction($parent.$index, $index)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a> {{amount}}</span>
+                <div class="transaction well well-sm" ng-repeat="amount in entity.transactions track by $index">
+                    <span class="lead">₹{{amount}}</span>
+                    <button class="btn btn-sm btn-warning" ng-click="deleteTransaction($parent.$index, $index)">x</button>
+                </div>  
+                <hr>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon">₹</div>
+                            <input type="number" class="form-control" id="newTransactionAmount" ng-model="newTransaction.amount" placeholder="Amount">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-default" ng-click="addTransaction($index, newTransaction.amount); newTransaction.amount = ''"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add</button>
+                </form>
             </div>
         </div>
     </div>
-    <hr>
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="well well-sm card">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                <span>New Entity</span>
-                N<input type="text" placeholder="Name" ng-model="newEntity.name">
-                C<input type="radio" value="c" ng-model="newEntity.kind">
-                D<input type="radio" value="d" ng-model="newEntity.kind">
-                <button class="btn btn-success" ng-click="addEntity(newEntity.name, newEntity.kind)">Add</button>
-            </div>
+
+    <div id="add-entity-form-container">
+        <div class="well well-sm card">
+            <form class="text-center">
+                <b>New Entity</b>
+                <hr>
+                <div class="form-group">
+                    <label class="sr-only" for="newEntityName">Name</label>
+                    <input type="text" class="form-control" id="newEntityName" ng-model="newEntity.name" placeholder="Name">
+                </div>
+                <button type="submit" class="btn btn-success" ng-click="addEntity(newEntity.name, 'c'); newEntity.name=''"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Creditor</button>
+                <button type="submit" class="btn btn-danger" ng-click="addEntity(newEntity.name, 'd'); newEntity.name=''"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Debtor</button>
+            </form>
         </div>
     </div>
 </div>

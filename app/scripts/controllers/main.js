@@ -31,33 +31,35 @@ angular.module('cashmereApp')
                     }
                 };
 
-                $scope.editEntity = function (entityIndex, newName) {
-                    $scope.entities[entityIndex] = {
-                        name: newName
-                    };
-                };
-
                 $scope.deleteEntity = function (entityIndex) {
                     $scope.entities.splice(entityIndex, 1);
                 };
 
-                $scope.addTransaction = function (entityIndex, value) {
-                    $scope.entities[entityIndex].transactions.push(value);
-                    $scope.entities[entityIndex].total += value;
+                $scope.addTransaction = function (entityIndex, amount) {
+                    var regex = new RegExp(/\d/);
+                    if (regex.test(amount)) {
+                        $scope.entities[entityIndex].transactions.push(amount);
+                        $scope.entities[entityIndex].total += amount;
+                        $scope.updateTotals();
+                    } else {
+                        alert('You didn\'t mention a valid amount.');
+                    }
                 };
 
                 $scope.deleteTransaction = function (entityIndex, transactionIndex) {
-                    var oldValue = $scope.entities[entityIndex].trasactions.splice(transactionIndex, 1);
-                    $scope.entities[entityIndex].total -= oldValue;
+                    var oldAmount = $scope.entities[entityIndex].transactions.splice(transactionIndex, 1);
+                    $scope.entities[entityIndex].total -= oldAmount;
+                    $scope.updateTotals();
                 };
 
-                $scope.editTransaction = function (entityIndex, transactionIndex, newValue) {
-                    var oldValue = $scope.entities[entityIndex].transactions[transactionIndex];
-                    $scope.entities[entityIndex].transactions[transactionIndex] = newValue;
-                    $scope.entities[entityIndex].total += (newValue - oldValue);
+                $scope.editTransaction = function (entityIndex, transactionIndex, newAmount) {
+                    var oldAmount = $scope.entities[entityIndex].transactions[transactionIndex];
+                    $scope.entities[entityIndex].transactions[transactionIndex] = newAmount;
+                    $scope.entities[entityIndex].total += (newAmount - oldAmount);
+                    $scope.updateTotals();
                 };
 
-                $scope.$watch($scope.entities, function () {
+                $scope.updateTotals = function () {
                     $scope.creditTotal = 0;
                     $scope.debitTotal = 0;
                     $scope.netTotal = 0;
@@ -67,5 +69,5 @@ angular.module('cashmereApp')
                     });
 
                     $scope.netTotal = $scope.creditTotal - $scope.debitTotal;
-                });
+                };
             }]);

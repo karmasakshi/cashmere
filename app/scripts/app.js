@@ -8,5 +8,6 @@
  *
  * Main module of the application.
  */
+
 angular
-  .module('cashmereApp', []);
+        .module('cashmereApp', ['ngAnimate']);

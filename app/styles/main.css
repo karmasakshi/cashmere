@@ -26,6 +26,7 @@
 body {
     background-color: #e7c39c;
     padding: 70px initial;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Custom Styles */
@@ -33,4 +34,75 @@ body {
     background: white;
     border: none;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+#add-entity-form-container {
+    bottom: 15px;
+    position: fixed;
+    right: 15px;
+}
+
+#add-entity-form-container .well {
+    margin: 0px;
+}
+
+.card hr {
+    margin-bottom: 12.5px;
+    margin-top: 5px;
+}
+
+.card.creditor {
+    border-bottom: 5px solid #5cb85c;
+}
+
+.card.debtor {
+    border-bottom: 5px solid #c9302c;
+}
+
+.entity .total{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.transaction {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+
+.transaction.well {
+    margin-bottom: 10px;
+}
+
+.transaction button {
+    bottom: -9px;
+    display: none;
+    font-weight: bold;
+    padding: 0px 6px;
+    position: absolute;
+    right: -10px;
+}
+
+.transaction:hover button{
+    display: block;
+}
+
+.transaction.ng-enter, .entity.ng-enter {
+    -webkit-animation: bounceIn 0.5s;
+    animation: bounceIn 0.5s;
+}
+
+.entity.ng-enter {
+    -webkit-animation: slideInUp 0.5s;
+    animation: slideInUp 0.5s;
+}
+
+.entity.ng-leave {
+    -webkit-animation: slideOutDown 0.5s;
+    animation: slideOutDown 0.5s;
+}
+
+.transaction.ng-leave {
+    -webkit-animation: bounceOut 0.5s;
+    animation: bounceOut 0.5s;
 }
