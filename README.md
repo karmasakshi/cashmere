@@ -22,57 +22,57 @@ New features are added frequently. View the upcoming [enhancements](https://gith
 * Ensure Node.js, NPM, Git, Grunt and Bower is installed
 * Clone the repository (or download the .zip)
 * Install project dependencies
-* Host
+* Execute `grunt serve:dist` to build and host or copy `bower_components` to `app` and host the `app` folder
 
 #### If you're not a developer
 Read a step fully before executing it. Complete a step fully before executing the next.
 
 ###### Windows
-* [Download](https://nodejs.org/download/) and install Node.js with the default options. This will also install NPM for you (which is good).
-* [Download](https://git-scm.com/downloads) and install Git. Select the **Use Git from the Windows Command Prompt** option when prompted.
-* Open Command Prompt. Ensure you **Run as Administrator**. Restart if already open to ensure new packages are accessible.
-* Install Grunt by executing `npm install -g grunt-cli`
-* Install Bower by executing `npm install -g bower`
-* Open Command Prompt. Ensure you **Run as Administrator**. Restart if already open to ensure new packages are accessible.
-* Navigate to the folder where you want this project to be installed. For example: `cd \Users\karmasakshi\Projects`. 
-* Clone this repository by executing `git clone https://github.com/karmasakshi/cashmere.git`. This will create the project folder.
-* Navigate to the project folder by executing `cd cashmere`
-* Execute `npm install`
-* Execute `bower install`
-* Execute `grunt serve:dist` to build and host the project. Your default web-browser will open automatically.
-* Press **Ctrl+C** to stop hosting
+1. [Download](https://nodejs.org/download/) and install Node.js with the default options. This will also install NPM for you (which is good).
+2. [Download](https://git-scm.com/downloads) and install Git. Select the **Use Git from the Windows Command Prompt** option when prompted.
+3. Open Command Prompt. Ensure you **Run as Administrator**. Restart if already open to ensure new packages are accessible.
+4. Install Grunt by executing `npm install -g grunt-cli`
+5. Install Bower by executing `npm install -g bower`
+6. Open Command Prompt. Ensure you **Run as Administrator**. Restart if already open to ensure new packages are accessible.
+7. Navigate to the folder where you want this project to be installed. For example: `cd \Users\karmasakshi\Projects`.
+8. Clone this repository by executing `git clone https://github.com/karmasakshi/cashmere.git`. This will create the project folder.
+9. Navigate to the project folder by executing `cd cashmere`
+10. Execute `npm install`
+11. Execute `bower install`
+12. Execute `grunt serve:dist` to build and host the project. Your default web-browser will open automatically.
+13. Press **Ctrl+C** to stop hosting
 
 ###### Mac
-* [Download](https://nodejs.org/download/) and install Node.js with the default options. This will also install NPM for you (which is good).
-* Install Xcode Command Line Tools (to get Git) by executing the following in Terminal: `xcode-select --install`. Select **Install** in the window that appears.
-* Restart Terminal to ensure new packages are accessible
-* Install Grunt by executing `sudo npm install -g grunt-cli`
-* Install Bower by executing `sudo npm install -g bower`
-* Restart Terminal to ensure new packages are accessible
-* Navigate to the folder where you want this project to be installed. For example: `cd \Users\karmasakshi\Projects`. 
-* Clone this repository by executing `git clone https://github.com/karmasakshi/cashmere.git`. This will create the project folder.
-* Navigate to the project folder by executing `cd cashmere`
-* Execute `npm install`
-* Execute `bower install`
-* Execute `grunt serve:dist` to build and host the project. Your default web-browser will open automatically.
-* Press **Ctrl+C** to stop hosting
+1. [Download](https://nodejs.org/download/) and install Node.js with the default options. This will also install NPM for you (which is good).
+2. Install Xcode Command Line Tools (to get Git) by executing the following in Terminal: `xcode-select --install`. Select **Install** in the window that appears.
+3. Restart Terminal to ensure new packages are accessible
+4. Install Grunt by executing `sudo npm install -g grunt-cli`
+5. Install Bower by executing `sudo npm install -g bower`
+6. Restart Terminal to ensure new packages are accessible
+7. Navigate to the folder where you want this project to be installed. For example: `cd \Users\karmasakshi\Projects`.
+8. Clone this repository by executing `git clone https://github.com/karmasakshi/cashmere.git`. This will create the project folder.
+9. Navigate to the project folder by executing `cd cashmere`
+10. Execute `npm install`
+11. Execute `bower install`
+12. Execute `grunt serve:dist` to build and host the project. Your default web-browser will open automatically.
+13. Press **Ctrl+C** to stop hosting
 
 ###### Ubuntu
-* Install Node.js by executing `sudo apt-get install nodejs`
-* Install Node.js wrapper by executing `sudo apt-get install nodejs-legacy`
-* Install NPM by executing `sudo apt-get install npm`
-* Install Git by executing `sudo apt-get install git`
-* Restart Terminal to ensure new packages are accessible
-* Install Grunt by executing `sudo npm install -g grunt-cli`
-* Install Bower by executing `sudo npm install -g bower`
-* Restart Terminal to ensure new packages are accessible
-* Navigate to the folder where you want this project to be installed. For example: `cd \Users\karmasakshi\Projects`. 
-* Clone this repository by executing `git clone https://github.com/karmasakshi/cashmere.git`. This will create the project folder.
-* Navigate to the project folder by executing `cd cashmere`
-* Execute `npm install`
-* Execute `bower install`
-* Execute `grunt serve:dist` to build and host the project. Your default web-browser will open automatically.
-* Press **Ctrl+C** to stop hosting
+1. Install Node.js by executing `sudo apt-get install nodejs`
+2. Install Node.js wrapper by executing `sudo apt-get install nodejs-legacy`
+3. Install NPM by executing `sudo apt-get install npm`
+4. Install Git by executing `sudo apt-get install git`
+5. Restart Terminal to ensure new packages are accessible
+6. Install Grunt by executing `sudo npm install -g grunt-cli`
+7. Install Bower by executing `sudo npm install -g bower`
+8. Restart Terminal to ensure new packages are accessible
+9. Navigate to the folder where you want this project to be installed. For example: `cd \Users\karmasakshi\Projects`.
+10. Clone this repository by executing `git clone https://github.com/karmasakshi/cashmere.git`. This will create the project folder.
+11. Navigate to the project folder by executing `cd cashmere`
+12. Execute `npm install`
+13. Execute `bower install`
+14. Execute `grunt serve:dist` to build and host the project. Your default web-browser will open automatically.
+15. Press **Ctrl+C** to stop hosting
 
 ## It's a bug... It's a feature... It's a to-do!
 [Issues](https://github.com/karmasakshi/cashmere/issues) are actively maintained. You are invited to be a part of it.
