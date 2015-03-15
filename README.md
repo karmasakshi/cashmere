@@ -8,6 +8,7 @@ Most humans manage their cash flow. Some use a spreadsheet or complex asset mana
 There really isn't much to it. You add *entities*: sources of cash inflow (i.e. *creditors*) and channels of cash outflow (i.e. *debtors*). You then add the amounts. Minimal engagement of grey matter.
 
 ## Features
+* **All local**: Nothing you type leaves your browser
 * **Slick UI**: Clean, color-coded interface that instils confidence
 * **Responsive**: Adapts to the screen-size so that you don't have to
 * **Cross platform**: It runs in a web-browser; and web-browsers are everywhere
