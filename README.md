@@ -22,7 +22,7 @@ New features are added frequently. View the upcoming [enhancements](https://gith
 #### If you're a developer
 * Ensure Node.js, NPM, Git, Grunt and Bower is installed
 * Clone the repository (or download the .zip)
-* Install project dependencies
+* Install project dependencies by executing `npm install` and `bower install`
 * Execute `grunt serve:dist` to build and host or copy `bower_components` to `app` and host the `app` folder
 
 #### If you're not a developer
